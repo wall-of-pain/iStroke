@@ -58,7 +58,7 @@ def data_fetch():
     married = encode_married(get_married)
 
     # Runner - Engine
-    model = load('xgc_jlib')
+    model = load('https://raw.githubusercontent.com/wall-of-pain/iStroke/main/xgc_jlib')
 
     data_np_array = np.array(
         [[age, hypertension, heart_disease, married, avg_glucose_level]])
