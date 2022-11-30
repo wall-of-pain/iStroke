@@ -22,6 +22,10 @@ print(path + ' --> ' + filename + "\n")
 print("This file directory only")
 print(os.path.dirname(full_path))
 
+for entry in os.scandir('.'):
+    if entry.is_file():
+        print(entry.name)
+
 
 # App Initialized
 app = Flask(__name__)
