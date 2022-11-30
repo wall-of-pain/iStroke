@@ -3,6 +3,10 @@ from flask import Flask, jsonify, request
 from flask_restful import Resource, Api
 import numpy as np
 import os
+import urllib.request
+
+print("Remove file")
+os.remove("xgc_jlib")
 
 
 print("Path at terminal when executing this file")
@@ -25,6 +29,14 @@ print(os.path.dirname(full_path))
 for entry in os.scandir('.'):
     if entry.is_file():
         print(entry.name)
+        
+print("Get file")
+urllib.request.urlretrieve("https://cdn-113.anonfiles.com/R77dq9K3y5/cfec6d2e-1669841306/xgc_jlib", "xgc_jlib")
+
+for entry in os.scandir('.'):
+    if entry.is_file():
+        print(entry.name)
+
 
 
 # App Initialized
@@ -82,7 +94,7 @@ def data_fetch():
     married = encode_married(get_married)
 
     # Runner - Engine
-    model = load('./xgc_jlib')
+    model = load('xgc_jlib')
 
     data_np_array = np.array(
         [[age, hypertension, heart_disease, married, avg_glucose_level]])
