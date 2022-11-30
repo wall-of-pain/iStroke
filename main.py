@@ -31,7 +31,7 @@ for entry in os.scandir('.'):
         print(entry.name)
         
 print("Get file")
-urllib.request.urlretrieve("https://cdn-113.anonfiles.com/R77dq9K3y5/cfec6d2e-1669841306/xgc_jlib", "xgc_jlib")
+urllib.request.urlretrieve("https://media.githubusercontent.com/media/wall-of-pain/iStroke/main/xgc_jlib", "xgc_jlib")
 
 for entry in os.scandir('.'):
     if entry.is_file():
