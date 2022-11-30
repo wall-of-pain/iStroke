@@ -5,6 +5,6 @@ itsdangerous
 Jinja2
 MarkupSafe
 Werkzeug
-joblib
+joblib==1.2.0
 flask-restful
 numpy
